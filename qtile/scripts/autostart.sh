@@ -24,3 +24,5 @@ picom --config $HOME/.config/qtile/scripts/picom.conf &
 
 run volumeicon &
 run google-chrome-stable
+run code
+run notion-app-nativefier
