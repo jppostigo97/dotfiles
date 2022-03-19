@@ -1,0 +1,92 @@
+ctrl + alt + Delete
+    urxvt 'htop task manager' -e htop
+
+#dmenu
+super + d
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+super + x
+    arcolinux-logout
+
+#alacritty
+super + Return
+    alacritty
+
+super + KP_Enter
+	alacritty
+
+super + w
+    google-chrome-stable
+
+# Volume control
+super + v
+    pavucontrol
+
+#File-Manager
+super + shift + Return
+	nautilus
+
+#Keyboard dependent
+#File-Manager
+super + shift + KP_Enter
+	nautilus
+
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#arcolinux-tweak-tool
+ctrl + alt + e
+    arcolinux-tweak-tool
+
+#Nitrogen
+ctrl + alt + i
+     nitrogen
+
+#Scrot
+Print
+    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+#screeenshooter
+ctrl + Print
+     xfce4-screenshooter
+
+#Gnome-Screenshot
+ctrl + shift + Print
+     gnome-screenshot -i
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
