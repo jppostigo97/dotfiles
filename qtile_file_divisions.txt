@@ -1,0 +1,10 @@
+- Create a "colors.py" file and turn the normal array into associative array
+    - Maybe load colors from a theme file? -> later
+- Create a myWidgets module and add each widget into a file each
+- Refactorize defaults (like the init_widgets_defaults function)
+- Check keys & mouse bindings and add those contents into two files (keys.py and mouse.py)
+- Split also for a "screen.py" file
+- Create a workspaces.py file and add its config there
+    - Also add the assign_app_group() part
+- Create a startup_hooks.py file
+- Create a rules.py file (for floating layout rules, for instance)

@@ -262,7 +262,9 @@ def init_colors():
             ["#62FF00", "#62FF00"], # color 7
             ["#6790eb", "#6790eb"], # color 8
             ["#C1C1C1", "#C1C1C1"], # color 9
-            ["#616161", "#616161"]] # color 10
+            ["#616161", "#616161"], # color 10
+            ["#3F444F", "#6790eb"], # color 11
+            ["#3F444F", "#3F444F"]] # color 12
 
 
 colors = init_colors()
@@ -287,12 +289,13 @@ def init_widgets_list():
                         margin_x = 0,
                         padding_y = 6,
                         padding_x = 5,
-                        borderwidth = 0,
+                        borderwidth = 4,
                         disable_drag = True,
                         active = colors[5],
                         inactive = colors[10],
                         rounded = False,
-                        highlight_method = "block",
+                        highlight_color = colors[12],
+                        highlight_method = "line",
                         this_current_screen_border = colors[8],
                         foreground = colors[5],
                         background = colors[1]
