@@ -1,0 +1,78 @@
+configuration {
+	modi: "window,run,drun";
+	font: "Noto Sans 16";
+	show-icons: true;
+	icon-theme: "Papirus-Dark";
+	hover-select: true;
+}
+
+* {
+	blackcolor: rgba(47, 52, 63, 100%);
+	darkgreycolor: rgba(65, 65, 65, 100%);
+	whitecolor: rgba(240, 240, 240, 100%);
+
+	redcolor: rgba(250, 0, 0, 100%);
+	bluecolor: rgba(103, 144, 235, 100%);
+}
+
+#inputbar {
+	text-color: @whitecolor;
+}
+
+#prompt {
+	text-color: @darkgreycolor;
+}
+
+#entry {
+	text-color: @whitecolor;
+}
+
+#window {
+	text-color: @whitecolor;
+	background-color: @blackcolor;
+}
+
+#element.normal.normal {
+	text-color: @whitecolor;
+	background-color: @darkgreycolor;
+}
+
+#element.normal.urgent {
+	text-color: @redcolor;
+	background-color: @darkgreycolor;
+}
+
+#element.normal.active {
+	text-color: @bluecolor;
+	background-color: @whitecolor;
+}
+
+#element.selected.normal {
+	text-color: @whitecolor;
+	background-color: @bluecolor;
+}
+
+#element.selected.urgent {
+	text-color: @whitecolor;
+	background-color: @bluecolor;
+}
+
+#element.selected.active {
+	text-color: @whitecolor;
+	background-color: @bluecolor;
+}
+
+#element.alternate.normal {
+	text-color: @whitecolor;
+	background-color: @darkgreycolor;
+}
+
+#element.alternate.urgent {
+	text-color: @redcolor;
+	background-color: @darkgreycolor;
+}
+
+#element.alternate.active {
+	text-color: @bluecolor;
+	background-color: @whitecolor;
+}

@@ -15,6 +15,12 @@ super + Return
 super + KP_Enter
 	alacritty
 
+super + space
+    rofi -show run -config /home/jppostigo/.config/qtile/rofi/windows.rasi
+
+alt + Tab
+    rofi -show window -config /home/jppostigo/.config/qtile/rofi/windows.rasi
+
 super + w
     google-chrome-stable
 
