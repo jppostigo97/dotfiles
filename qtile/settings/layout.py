@@ -1,23 +1,25 @@
 from libqtile import layout, hook
 from libqtile.config import Match
 
+from .colors import color
+
 auto_fullscreen = True
 focus_on_window_activation = "focus"
 
 myLayoutConfig = {
-    "single_margin": 0,
-    "single_border_width": 0,
+    "single_margin": 8,
+    "single_border_width": 2,
     "margin": 8,
     "border_width": 2,
-    "border_normal": "#4c566a",
-    "border_focus": "#5e81ac"
+    "border_normal": color["comp2"],
+    "border_focus": color["comp2_light"]
 }
 
 layouts = [
     layout.MonadTall(**myLayoutConfig),
+    layout.Max(**myLayoutConfig),
     layout.MonadWide(**myLayoutConfig),
-    layout.Matrix(**myLayoutConfig),
-    layout.Max(**myLayoutConfig)
+    layout.Matrix(**myLayoutConfig)
 ]
 
 @hook.subscribe.client_new

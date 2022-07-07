@@ -16,10 +16,7 @@ dgroups_app_rules = []
 @hook.subscribe.startup_once
 def start_once():
     subprocess.call([path.join(qtile_scripts_path, "autostart.sh")])
-
-#@hook.subscribe.startup
-#def start_always():
-#    subprocess.Popen(['xsetroot', '-cursor_name', 'left_ptr'])
+    subprocess.call([path.join(qtile_scripts_path, "screen_setup.sh")])
 
 @hook.subscribe.restart
 def restart_hook():

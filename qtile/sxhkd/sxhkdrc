@@ -3,39 +3,27 @@ ctrl + alt + Delete
 
 #dmenu
 super + d
-	dmenu_run -i -nb '#2F343F' -nf '#6790eb' -sb '#6790eb' -sf '#2F343F' -fn 'NotoMonoRegular:bold:pixelsize=20'
+	dmenu_run -i -b -nb '#3F444F' -nf '#DDAAFF' -sb '#AA88DD' -sf '#3F444F' -fn 'NotoMonoRegular:bold:pixelsize=20'
 
 super + x
-    arcolinux-logout
+    archlinux-logout
 
 #alacritty
 super + Return
     alacritty
 
 super + KP_Enter
-	alacritty
-
-super + space
-    rofi -show run -config /home/jppostigo/.config/qtile/rofi/windows.rasi
-
-alt + Tab
-    rofi -show window -config /home/jppostigo/.config/qtile/rofi/windows.rasi
+    alacritty
 
 super + w
-    google-chrome-stable
+    firefox
 
 # Volume control
 super + v
     pavucontrol
 
-#File-Manager
-super + shift + Return
-	nautilus
-
-#Keyboard dependent
-#File-Manager
-super + shift + KP_Enter
-	nautilus
+super + e
+    nautilus
 
 #reload sxhkd:
 super + shift + s
@@ -45,17 +33,8 @@ super + shift + s
 ctrl + alt + e
     arcolinux-tweak-tool
 
-#Nitrogen
-ctrl + alt + i
-     nitrogen
-
-#Scrot
 Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-
-#screeenshooter
-ctrl + Print
-     xfce4-screenshooter
+    xfce4-screenshooter
 
 #Gnome-Screenshot
 ctrl + shift + Print
@@ -92,9 +71,7 @@ XF86AudioStop
 #Brightness up
 XF86MonBrightnessUp
     brightnessctl set +10%
-    #xbacklight -inc 10
 
 #Brightness down
 XF86MonBrightnessDown
     brightnessctl set 10%-
-    #xbacklight -dec 10

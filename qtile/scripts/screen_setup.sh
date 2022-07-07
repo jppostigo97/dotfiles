@@ -3,10 +3,12 @@
 display_number=$(xrandr | grep -c " connected")
 
 if [[ display_number -eq 2 ]]; then
-    notify-send "Configurando pantalla secundaria"
+    notify-send "Doble pantalla"
 
-    eval $(/home/jppostigo/scripts/left.sh &)
+    xrandr --output HDMI-1-3 --auto --primary --pos 0x0 &
+    xrandr --output eDP-1 --auto --pos 2560x360 &
 else
-    notify-send "Configurando monitor portátil"
+    notify-send "Modo portátil"
+    xrandr --output HDMI-1-3 --off &
 	xrandr --output eDP-1 --auto &
 fi

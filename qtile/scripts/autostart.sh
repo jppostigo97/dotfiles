@@ -7,22 +7,22 @@ function run {
   fi
 }
 
-# Replace Qtile default keybindings
+feh --bg-fill $HOME/Pictures/purple-pink-bgs/pc/main.jpg &
+
+# SXHKD for keybindings
 run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
-
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-
-run variety &
-run nm-applet &
+# Tray items and init important stuff
 run pamac-tray &
+run nm-applet &
+run volumeicon &
+blueberry-tray &
+run variety &
 run xfce4-power-manager &
 numlockx on &
-blueberry-tray &
 picom --config $HOME/.config/qtile/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-run volumeicon &
-run google-chrome-stable
-run code
-run notion-app-nativefier
+# Autostart apps
+run notion-app-enhanced &
+run google-chrome-stable &
